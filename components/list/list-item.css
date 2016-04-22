@@ -1,0 +1,63 @@
+.root {
+    position: relative;
+    outline: none;
+    margin: 0;
+    will-change: margin;
+    transition: margin 0.175s;
+    min-height: 52px;
+}
+
+.selected {
+    will-change: initial;
+}
+
+.selected.root {
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.innerBox {
+    background: #ffffff;
+    min-height: 40px;
+    line-height: 32px;
+    position: relative;
+    cursor: pointer;
+    will-change: margin, padding, background-color;
+    transition: margin 0.175s, padding 0.175s, background-color 0.175s;
+}
+
+.selected .innerBox {
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: #ddd;
+    border: rgba(0,0,0,.4);
+    box-sizing: border-box;
+    outline: 1px solid transparent;
+    cursor: auto;
+}
+
+.selected:first-child .innerBox {
+    margin-top: 0;
+}
+
+.selected:last-child .innerBox {
+    margin-bottom: 0;
+}
+
+.innerBox:before {
+    content: '';
+    position: absolute;
+    display: block;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+
+.selected .innerBox:before {
+    box-shadow: none;
+}

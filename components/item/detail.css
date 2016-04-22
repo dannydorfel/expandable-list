@@ -1,0 +1,53 @@
+.root {
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    background: #ddd;
+    padding: 20px 26px 20px 26px;
+    cursor: pointer;
+    color: #009926;
+    font-size: 1.4em;
+    font-weight: 500;
+    z-index: 25;
+    width: 100%;
+    will-change: position;
+}
+.titleFixed .title {
+    position: fixed;
+    top: 0;
+}
+.absoluteTop .title {
+    position: absolute;
+    bottom: 0;
+}
+
+.description {
+    padding: 0 26px 20px 26px;
+}
+.titleFixed .description, .absoluteTop .description {
+    padding-top: 72px;
+}
+.footer {
+    position: relative;
+    width: 100%;
+    background: #ddd;
+    padding: 20px 26px 20px 26px;
+    cursor: pointer;
+    color: #009926;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.footerFixed .footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.absoluteBottom .footer {
+    position: absolute;
+    top: 144px;
+}
+.footerFixed .description {
+    padding-bottom: 72px;
+}
